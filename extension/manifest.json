@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ArgueScan",
+  "version": "1.0",
+  "description": "Scans and flags structural logical fallacies in web text using semantic embeddings.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
